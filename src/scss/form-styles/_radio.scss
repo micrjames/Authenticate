@@ -1,0 +1,29 @@
+@use "sass:math";
+
+@mixin radio-appearance($size, $background-color, $border-color, $outline-color) {
+   input {
+	  appearance: none;
+	  
+	  display: inline-block;
+	  width: $size;
+	  height: $size;
+	  padding: math.div($size, 5);
+	  background-clip: content-box;
+	  border: 2px solid $border-color;
+	  border-radius: 50%;
+	  margin-right: 0;
+
+	  position: relative;
+	  top: 1px;
+
+	  &:checked {
+		 background-color: $background-color;
+	  }
+	  &:hover {
+		 box-shadow: 0 0 math.div($size, 5) 0px $background-color inset;
+	  }
+	  &:focus {
+		 outline: 1px solid $outline-color;
+	  }
+   }        
+}

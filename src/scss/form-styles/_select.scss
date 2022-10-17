@@ -1,0 +1,54 @@
+%select-reset {
+   // Reset the select input
+   appearance: none;
+	
+   background-color: transparent;
+   border: none;
+   padding: 0 1em 0 0;
+   margin: 0;
+   width: 100%;
+   font-family: inherit;
+   font-size: inherit;
+   cursor: inherit;
+   line-height: inherit;
+
+   // Stack above custom arrow
+   z-index: 1;
+
+   outline: none;
+}
+
+@mixin select-appearance($padding, $font-size) {
+   $select-border: #393939;
+   $select-focus: #101484;
+   $select-arrow: $select-border;
+   .select {  
+	  // Style the select input
+	  width: 100%;
+	  border: 1px solid $select-border;                                                             
+	  border-radius: 5px;
+	  padding: $padding;
+	  font-size: $font-size;
+	  cursor: pointer;
+	  background: linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
+   }
+   .select {
+	  display: grid;
+	  grid-template-areas: "select";
+	  align-items: center;
+	  position: relative;
+
+	  &::after {
+		 content: "";
+		 justify-self: end;
+		 width: 0.8em;
+		 height: 0.5em;
+		 background-color: $select-arrow;
+		 clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+	  }
+   }
+   // Create the arrow
+   select, .select::after {
+	  grid-area: select;
+   }
+}

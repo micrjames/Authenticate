@@ -1,0 +1,88 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+#signup-form {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+body {
+  background-color: rgba(102, 51, 153, 0.9);
+}
+
+#signup-form {
+  background-color: rgba(153, 102, 204, 0.9);
+  width: 75%;
+  color: white;
+  position: absolute;
+  top: 25%;
+  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
+}
+#signup-form-title {
+  font-size: 1.75rem;
+  text-align: center;
+}
+#signup-form-control {
+  padding: 2rem 0;
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: repeat(3, auto);
+  align-items: center;
+}
+#signup-form-control label {
+  grid-column: 1/2;
+  padding-left: 0.5rem;
+  font-size: 1.5rem;
+}
+#signup-form-control input[type=text], #signup-form-control input[type=password], #signup-form-control input[type=email] {
+  grid-column: 2/-1;
+  background-color: rgba(179, 140, 217, 0.9);
+  outline: none;
+  outline-style: none;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+}
+#signup-form-control input[type=text]::placeholder, #signup-form-control input[type=password]::placeholder, #signup-form-control input[type=email]::placeholder {
+  color: white;
+}
+#signup-form-control input[type=text]:focus, #signup-form-control input[type=password]:focus, #signup-form-control input[type=email]:focus {
+  color: white;
+  caret-color: white;
+}
+#signup-form-control input[type=text]:invalid, #signup-form-control input[type=password]:invalid, #signup-form-control input[type=email]:invalid {
+  border-color: red;
+  color: red;
+}
+#signup-form-control input[type=text]:invalid ~ .error-message, #signup-form-control input[type=password]:invalid ~ .error-message, #signup-form-control input[type=email]:invalid ~ .error-message {
+  display: block;
+}
+#signup-form-control .error-message {
+  grid-column: 2/-1;
+  display: none;
+  font-size: 1.25rem;
+  color: red;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+#signup-form-btn-group {
+  display: flex;
+  justify-content: space-evenly;
+}
+#signup-form-btn-group .btn {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  font-family: inherit;
+  font-size: 1.2rem;
+  text-decoration: none;
+  padding: 0.9rem 1.2rem;
+  margin: 0.5rem 0;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background-color: rgba(64, 32, 96, 0.9);
+  border-radius: 0;
+}
