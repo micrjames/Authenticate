@@ -12,4 +12,7 @@ const loginForm = document.forms[1];
 const lightestBgColor = "#945ec9";
 const lighterBgColor = "#8547c2";
 
-export { loginToggleBtn, signupToggleBtn, signupForm, loginForm, lightestBgColor, lighterBgColor };
+const loginState = [loginToggleBtn, loginForm];
+const signupState = [signupToggleBtn, signupForm];
+
+export { loginState, signupState, loginToggleBtn, signupToggleBtn, lightestBgColor, lighterBgColor };

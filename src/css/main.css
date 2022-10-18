@@ -22,6 +22,7 @@ body {
 
 #signup-login {
   width: 85vw;
+  height: 68vh;
   position: absolute;
   border: 1px solid white;
   box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
@@ -112,6 +113,11 @@ body {
   margin-top: 0.5rem;
   font-style: italic;
 }
+#signup-login #signup-form-control-hidden {
+  display: block;
+  width: 100%;
+  height: 232px;
+}
 #signup-login #signup-form-btn-group {
   display: grid;
   grid-template-columns: repeat(4, 25%);
@@ -188,6 +194,11 @@ body {
   color: red;
   margin-top: 0.5rem;
   font-style: italic;
+}
+#signup-login #login-form-control-hidden {
+  display: block;
+  width: 100%;
+  height: 232px;
 }
 #signup-login #login-form-btn-group {
   display: grid;

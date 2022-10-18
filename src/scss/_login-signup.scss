@@ -55,6 +55,11 @@
 		  font-style: italic;
 	   }
 	}
+	&-control-hidden {
+	   display: block;
+	   width: 100%;
+	   height: 232px;
+	}
 	&-btn-group {
 	   display: grid;
 	   grid-template-columns: repeat(4, 25%);
