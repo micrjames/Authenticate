@@ -2,7 +2,7 @@
 
 $background-color: #663399;
 $selection-width: 85vw;
-$selection-height: 68vh;
+$selection-height: 62vh;
 body {
    background-color: $background-color;
 }
@@ -11,19 +11,16 @@ body {
    width: $selection-width;
    height: $selection-height;
    position: absolute;                                                                                  
-   border: 1px solid white;
    @extend %center-object;
-   @include box-shadow(0, 3px, 10px, 0, rgb(0 0 0 / 0.2), false);
+   @include box-shadow(10px, 5px, 15px, 5px, rgb(0 0 0 / 0.5), false);
    &-hdr {
 	   @include hdr;
    }
    #signup-form {
 	   @include l-s(100%, $background-color);
-	   padding-top: 1.2rem;
    }
    #login-form {
 	   @include l-s(100%, $background-color);
-	   padding-top: 1.2rem;
    }
    .hidden {
 	   display: none;

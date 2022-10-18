@@ -22,10 +22,9 @@ body {
 
 #signup-login {
   width: 85vw;
-  height: 68vh;
+  height: 62vh;
   position: absolute;
-  border: 1px solid white;
-  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 10px 5px 15px 5px rgba(0, 0, 0, 0.5);
 }
 #signup-login-hdr-btn-group {
   display: grid;
@@ -44,8 +43,10 @@ body {
   padding: 0.9rem 1.2rem;
   margin: 0;
   border-radius: 5px;
-  border: 1px solid white;
+  border: none;
   cursor: pointer;
+  border-color: white;
+  border-width: 1px;
 }
 #signup-login-hdr-btn-group-signup {
   grid-column: 3/-1;
@@ -57,19 +58,16 @@ body {
   padding: 0.9rem 1.2rem;
   margin: 0;
   border-radius: 5px;
-  border: 1px solid white;
+  border: none;
   cursor: pointer;
+  border-color: white;
+  border-width: 1px;
 }
 #signup-login #signup-form {
   background-color: #9966cc;
   width: 100%;
   color: white;
   font-size: 1.75rem;
-  padding-top: 1.2rem;
-}
-#signup-login #signup-form-title {
-  font-size: 100%;
-  text-align: center;
 }
 #signup-login #signup-form-control {
   font-size: 80%;
@@ -147,11 +145,6 @@ body {
   width: 100%;
   color: white;
   font-size: 1.75rem;
-  padding-top: 1.2rem;
-}
-#signup-login #login-form-title {
-  font-size: 100%;
-  text-align: center;
 }
 #signup-login #login-form-control {
   font-size: 80%;
