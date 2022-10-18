@@ -1,10 +1,29 @@
-@import 'utils/config', 'signup';
+@import 'utils/utils', 'utils/config', 'utils/button', 'login-signup', 'hdr';
 
-$background-color: rgba(102, 51, 153, 0.9);
+$background-color: #663399;
+$selection-width: 85vw;
 body {
-    background-color: $background-color;
+   background-color: $background-color;
 }
 
-#signup-form {
-    @include signup($background-color);
+#signup-login {
+   width: $selection-width;
+   position: absolute;                                                                                  
+   border: 1px solid white;
+   @extend %center-object;
+   @include box-shadow(0, 3px, 10px, 0, rgb(0 0 0 / 0.2), false);
+   &-hdr {
+	   @include hdr;
+   }
+   #signup-form {
+	   @include l-s(100%, $background-color);
+	   padding-top: 1.2rem;
+   }
+   #login-form {
+	   @include l-s(100%, $background-color);
+	   padding-top: 1.2rem;
+   }
+   .hidden {
+	   display: none;
+   }
 }
