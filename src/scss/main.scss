@@ -2,11 +2,24 @@
 
 $background-color: #663399;
 $selection-width: 85vw;
-$selection-height: 62vh;
+$selection-height: 60vh;
 body {
    background-color: $background-color;
 }
-
+#dashboard-container {
+	width: 85%;
+	margin: 0.75rem auto;
+	padding: 1.2rem;
+	text-align: center;
+	background-color: white;
+    h1 {
+		font-size: 1.75rem;
+	}
+	p {
+	    margin: 1.2rem 0;
+	    font-size: 1.25rem;
+	}
+}
 #signup-login {
    width: $selection-width;
    height: $selection-height;

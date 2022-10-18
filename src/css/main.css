@@ -20,9 +20,24 @@ body {
   background-color: #663399;
 }
 
+#dashboard-container {
+  width: 85%;
+  margin: 0.75rem auto;
+  padding: 1.2rem;
+  text-align: center;
+  background-color: white;
+}
+#dashboard-container h1 {
+  font-size: 1.75rem;
+}
+#dashboard-container p {
+  margin: 1.2rem 0;
+  font-size: 1.25rem;
+}
+
 #signup-login {
   width: 85vw;
-  height: 62vh;
+  height: 60vh;
   position: absolute;
   box-shadow: 10px 5px 15px 5px rgba(0, 0, 0, 0.5);
 }
