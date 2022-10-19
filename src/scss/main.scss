@@ -30,10 +30,10 @@ body {
 	   @include hdr;
    }
    #signup-form {
-	   @include l-s(100%, $background-color);
+	   @include l-s(100%, $background-color, white, #B48311);
    }
    #login-form {
-	   @include l-s(100%, $background-color);
+	   @include l-s(100%, $background-color, white, #B48311);
    }
    .hidden {
 	   display: none;

@@ -112,8 +112,8 @@ body {
   caret-color: white;
 }
 #signup-login #signup-form-control input[type=text]:invalid, #signup-login #signup-form-control input[type=password]:invalid, #signup-login #signup-form-control input[type=email]:invalid {
-  border-color: red;
-  color: red;
+  border-color: #B48311;
+  color: #B48311;
 }
 #signup-login #signup-form-control input[type=text]:invalid ~ .error-message, #signup-login #signup-form-control input[type=password]:invalid ~ .error-message, #signup-login #signup-form-control input[type=email]:invalid ~ .error-message {
   display: block;
@@ -122,9 +122,13 @@ body {
   grid-column: 2/-1;
   display: none;
   font-size: 85%;
-  color: red;
+  color: #B48311;
   margin-top: 0.5rem;
   font-style: italic;
+  list-style-position: inside;
+}
+#signup-login #signup-form-control .error-message li {
+  margin: 0.75rem 0;
 }
 #signup-login #signup-form-control-hidden {
   display: block;
@@ -189,8 +193,8 @@ body {
   caret-color: white;
 }
 #signup-login #login-form-control input[type=text]:invalid, #signup-login #login-form-control input[type=password]:invalid, #signup-login #login-form-control input[type=email]:invalid {
-  border-color: red;
-  color: red;
+  border-color: #B48311;
+  color: #B48311;
 }
 #signup-login #login-form-control input[type=text]:invalid ~ .error-message, #signup-login #login-form-control input[type=password]:invalid ~ .error-message, #signup-login #login-form-control input[type=email]:invalid ~ .error-message {
   display: block;
@@ -199,9 +203,13 @@ body {
   grid-column: 2/-1;
   display: none;
   font-size: 85%;
-  color: red;
+  color: #B48311;
   margin-top: 0.5rem;
   font-style: italic;
+  list-style-position: inside;
+}
+#signup-login #login-form-control .error-message li {
+  margin: 0.75rem 0;
 }
 #signup-login #login-form-control-hidden {
   display: block;

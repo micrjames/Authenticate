@@ -49,6 +49,11 @@
 		  color: $error-color;
 		  margin-top: 0.5rem;
 		  font-style: italic;
+		  list-style-position: inside;
+
+		  li {
+			  margin: 0.75rem 0;
+		  }
 	   }
 	}
 	&-control-hidden {

@@ -29,21 +29,27 @@
 							 pattern="^[a-zA-Z]+(?:\s[a-zA-Z]+)?$"
 							 placeholder="i.e. Enter your Name Here"
 					  >
-					  <span class="error-message">
-							 Please enter a correctly formatted value.
-					  </span>
+					  <ul class="error-message">
+						  <li>Must contain at least two names (first and last).</li>
+						  <li>Must contain a space.</li>
+					  </ul>
 				   </span>
 				   <span id="signup-form-control">
 					  <label for="signup-form-username">User Name</label>
 					  <input
 							 id="signup-form-username"
 							 type="text"
-							 pattern="^[a-zA-Z0-9]+([a-zA-Z0-9](_|-| )[a-zA-Z0-9])*[a-zA-Z0-9]*$"
+							 pattern="^[a-zA-Z][a-zA-Z0-9]{4,}$"
 							 placeholder="i.e. Enter your User Name Here"
 					  >
-					  <span class="error-message">
-							 Please enter a correctly formatted value.
-					  </span>
+					  <!--
+							  Must start with a letter (lowercase or capital).
+							  Must have at least five character.
+					  -->
+					  <ul class="error-message">
+						 <li>Must start with a letter (lowercase or capital).</li>
+						 <li>Must have at least five character.</li>
+					  </ul>
 				   </span>
 				   <hr>
 				   <span id="signup-form-control">
@@ -51,23 +57,38 @@
 					  <input
 							 id="signup-form-password"
 							 type="password"
-							 pattern="^[a-zA-Z0-9]+([a-zA-Z0-9](_|-| )[a-zA-Z0-9])*[a-zA-Z0-9]*$"
+							 pattern="^(?!.*[#!])(?=.*[A-Z])(?=.*[0-9]).{8,}$"
 							 placeholder="i.e. Enter your Password Here"
 					  >
-					  <span class="error-message">
-							 Please enter a correctly formatted value.
-					  </span>
+					  <!--
+						   Is greater than seven characters.
+						   Contains at least one digit.
+						   Contains at least one uppercase letter.
+					  -->
+					  <ul class="error-message">
+						 <li>Must have more than seven characters.</li>
+						 <li>Must have at least one digit.</li>
+						 <li>Must contain at least uppercase character.</li>
+					  </ul>
 				   </span>
 				   <span id="signup-form-control">
 					  <label for="signup-form-password-confirm">Confirm Password</label>
 					  <input
 							 id="signup-form-password"
 							 type="password"
+							 pattern="^(?!.*[#!])(?=.*[A-Z])(?=.*[0-9]).{8,}$"
 							 placeholder="i.e. Confirm your Password Here"
 					  >
-					  <span class="error-message">
-							 Please enter a correctly formatted value.
-					  </span>
+					  <!--
+						   Is greater than seven characters.
+						   Contains at least one digit.
+						   Contains at least one uppercase letter.
+					  -->
+					  <ul class="error-message">
+						 <li>Must have more than seven characters.</li>
+						 <li>Must have at least one digit.</li>
+						 <li>Must contain at least uppercase character.</li>
+					  </ul>
 				   </span>
 				   <hr>
 				   <span id="signup-form-control">
@@ -78,9 +99,12 @@
 						  pattern="^\w+[\+\.\w-]*@([\w-]+\.)*\w+[\w-]*\.([a-z]{2,4}|\d+)$"
 						  placeholder="i.e. Enter an Email"
 					  >
-					  <span class="error-message">
-						  Please enter a correctly formatted value.
-					  </span>
+					  <ul class="error-message">
+						  <li>Must contain at least one word character.</li>
+						  <li>May, then, contain one of the following: +, ., a word character, or a hyphen.</li>
+						  <li>Must, then, contain the @ symbol.</li>
+						  <li>Then, finally, must contain a series of extension characters following a . symbol.</li>
+					  </ul>
 				   </span>
 				   <hr>
 				   <div id="signup-form-btn-group">
@@ -97,12 +121,17 @@
 							 id="login-form-username"
 							 name="username"
 							 type="text"
-							 pattern="^[a-zA-Z0-9]+([a-zA-Z0-9](_|-| )[a-zA-Z0-9])*[a-zA-Z0-9]*$"
+							 pattern="^[a-zA-Z][a-zA-Z0-9]{4,}$"
 							 placeholder="i.e. Enter your User Name Here"
 					  >
-					  <span class="error-message">
-							 Please enter a correctly formatted value.
-					  </span>
+					  <!--
+							  Must start with a letter (lowercase or capital).
+							  Must have at least five character.
+					  -->
+					  <ul class="error-message">
+						 <li>Must start with a letter (lowercase or capital).</li>
+						 <li>Must have at least five character.</li>
+					  </ul>
 				   </span>
 				   <hr>
 				   <span id="login-form-control">
@@ -111,12 +140,19 @@
 							 id="login-form-password"
 							 name="password"
 							 type="password"
-							 pattern="^[a-zA-Z0-9]+([a-zA-Z0-9](_|-| )[a-zA-Z0-9])*[a-zA-Z0-9]*$"
+							 pattern="^(?!.*[#!])(?=.*[A-Z])(?=.*[0-9]).{8,}$"
 							 placeholder="i.e. Enter your Password Here"
 					  >
-					  <span class="error-message">
-							 Please enter a correctly formatted value.
-					  </span>
+					  <!--
+						   Is greater than seven characters.
+						   Contains at least one digit.
+						   Contains at least one uppercase letter.
+					  -->
+					  <ul class="error-message">
+						 <li>Must have more than seven characters.</li>
+						 <li>Must have at least one digit.</li>
+						 <li>Must contain at least uppercase character.</li>
+					  </ul>
 				   </span>
 				   <hr>
 				   <span id="login-form-control-hidden">
