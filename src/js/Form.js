@@ -3,6 +3,7 @@ class Form {
    #fields = [];
     
    #values = [];                                                                                       
+   #data = {};
    constructor(form, fields) {                                                                         
        this.#form = form;                                                                               
        this.#fields = fields;                                                                           
@@ -13,7 +14,7 @@ class Form {
    }
  
    get values() {                                                                                
-       const formEls = this.form.elements;
+       const formEls = this.#form.elements;
          
        this.#values = this.#fields.map(field => {
 		  const input = formEls[field];
@@ -22,6 +23,14 @@ class Form {
 	   
 	   return this.#values;
    }   
+
+   get data() {
+	   this.values.forEach((value, index) => {
+		   this.#data[this.#fields[index]] = value;
+	   });
+	   
+	   return this.#data;
+   }
 }
 
 export { Form };

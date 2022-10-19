@@ -25,6 +25,7 @@
 					  <label for="signup-form-name">Name</label>
 					  <input
 							 id="signup-form-name"
+							 name="name"
 							 type="text"
 							 pattern="^[a-zA-Z]+(?:\s[a-zA-Z]+)?$"
 							 placeholder="i.e. Enter your Name Here"
@@ -38,6 +39,7 @@
 					  <label for="signup-form-username">User Name</label>
 					  <input
 							 id="signup-form-username"
+							 name="username"
 							 type="text"
 							 pattern="^[a-zA-Z][a-zA-Z0-9]{4,}$"
 							 placeholder="i.e. Enter your User Name Here"
@@ -56,6 +58,7 @@
 					  <label for="signup-form-password">Password</label>
 					  <input
 							 id="signup-form-password"
+							 name="password"
 							 type="password"
 							 pattern="^(?!.*[#!])(?=.*[A-Z])(?=.*[0-9]).{8,}$"
 							 placeholder="i.e. Enter your Password Here"
@@ -75,6 +78,7 @@
 					  <label for="signup-form-password-confirm">Confirm Password</label>
 					  <input
 							 id="signup-form-password"
+							 name="confirm_password"
 							 type="password"
 							 pattern="^(?!.*[#!])(?=.*[A-Z])(?=.*[0-9]).{8,}$"
 							 placeholder="i.e. Confirm your Password Here"
@@ -95,6 +99,7 @@
 					  <label for="signup-form-email">Email</label>
 					  <input
 						  id="signup-form-email"
+						  name="email"
 						  type="email"
 						  pattern="^\w+[\+\.\w-]*@([\w-]+\.)*\w+[\w-]*\.([a-z]{2,4}|\d+)$"
 						  placeholder="i.e. Enter an Email"
@@ -109,7 +114,7 @@
 				   <hr>
 				   <div id="signup-form-btn-group">
 					  <input class="btn" id="signup-form-btn-group-reset" type="reset">
-					  <input class="btn" id="signup-form-btn-group-btn" type="button" value="Submit">
+					  <input class="btn" id="signup-form-btn-group-btn" type="submit" value="Submit">
 				   </div>
 			   </fieldset>
 		   </form>

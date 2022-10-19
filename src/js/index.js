@@ -3,6 +3,9 @@ import { loginForm, signupForm,
        } from "./incs.js";
 import { toggleFormState } from "./loginSignup.js";
 import { Login } from "./Login.js";
+import { Signup } from "./Signup.js";
+import { fetchData, setOption } from "./fetchData.js";
+import { HOST, PORT } from "./config_server.js";
 
 const loginState = [loginToggleBtn, loginForm];
 const signupState = [signupToggleBtn, signupForm];
@@ -26,3 +29,18 @@ if(loginForm) {
 	    console.log(values);
 	});
 }
+if(signupForm) {
+    const fields = ["name", "username", "password", "confirm_password", "email"];
+    const signup = new Signup(signupForm, fields);
+    signup.onSubmit(function() {
+	    const user = signup.data;
+	    addUser(user);
+	});
+}
+
+const fetchUsers = async () => {
+    return await fetchData(`http://${HOST}:${PORT}/users`);
+};
+const addUser = async user => {
+    await fetchData(`http://${HOST}:${PORT}/users`, setOption('POST', user));
+};
