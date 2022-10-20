@@ -1,7 +1,10 @@
 const body = document.body;
+
 const dashboardContainer = body.children.namedItem("dashboard-container");        
 const logoutContainer = dashboardContainer.children.namedItem("logout-container");
 const logout = logoutContainer.children.namedItem("logout");
+
+const dashboardHdr = dashboardContainer.children.namedItem("dashboard-hdr"); 
 
 class Auth {
     constructor() {
@@ -24,4 +27,4 @@ class Auth {
 	}
 }
 
-export { Auth, logout };
+export { Auth, logout, dashboardHdr };
