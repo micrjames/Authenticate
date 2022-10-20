@@ -35,6 +35,15 @@ body {
   font-size: 1.25rem;
 }
 
+#signup-login-error-message {
+  position: relative;
+  top: 140px;
+  left: 55px;
+  color: #B48311;
+  font-size: 1.35rem;
+  font-style: italic;
+}
+
 #signup-login {
   width: 85vw;
   height: 60vh;

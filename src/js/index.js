@@ -4,8 +4,8 @@ import { loginForm, signupForm,
 import { toggleFormState } from "./loginSignup.js";
 import { Login } from "./Login.js";
 import { Signup } from "./Signup.js";
-import { fetchData, setOption } from "./fetchData.js";
-import { HOST, PORT } from "./config_server.js";
+import { fetchUsers, addUser } from "./crudUsers.js";
+import { validateLogin, validateSignup } from "./validateFormData.js";
 
 const loginState = [loginToggleBtn, loginForm];
 const signupState = [signupToggleBtn, signupForm];
@@ -24,9 +24,23 @@ if(loginForm) {
     const fields = ["username", "password"];
     const login = new Login(loginForm, fields);
     login.onSubmit(function() {
-		localStorage.setItem("auth", 1);
-	    const values = login.values;
-	    console.log(values);
+	    const user = login.values;
+	    const users = fetchUsers();
+	    
+	    validateLogin(user, users, function() {
+			localStorage.setItem("auth", 1);
+			loginForm.reset();
+
+		    users.then(res => {
+			    const users = res;
+			    const whichUser = users.find(thisUser => thisUser.username == user[0]);
+			    const name = whichUser.name;
+			    const fullName = name.split(" ");
+			    const firstName = fullName[0];
+
+			    location.replace(`dashboard.html?name=${firstName}`);
+			}).catch(err => console.log(err));
+	   });
 	});
 }
 if(signupForm) {
@@ -34,13 +48,10 @@ if(signupForm) {
     const signup = new Signup(signupForm, fields);
     signup.onSubmit(function() {
 	    const user = signup.data;
-	    addUser(user);
+	    const users = fetchUsers();
+	    
+	    validateSignup(user, users, function() {
+		   // addUser(user);
+		});
 	});
 }
-
-const fetchUsers = async () => {
-    return await fetchData(`http://${HOST}:${PORT}/users`);
-};
-const addUser = async user => {
-    await fetchData(`http://${HOST}:${PORT}/users`, setOption('POST', user));
-};

@@ -1,4 +1,7 @@
 const body = document.body;
+
+const signupLoginErrMsg = body.children.namedItem("signup-login-error-message");
+
 const signupLogin = body.children.namedItem("signup-login");
 const signupLoginHdr = signupLogin.children.namedItem("signup-login-hdr");
 const signupLoginHdrBtnGroup = signupLoginHdr.children.namedItem("signup-login-hdr-btn-group");
@@ -13,5 +16,6 @@ const lightestBgColor = "#945ec9";
 const lighterBgColor = "#8547c2";
 
 export { loginForm, signupForm, loginToggleBtn, signupToggleBtn,
-		 lightestBgColor, lighterBgColor
+		 lightestBgColor, lighterBgColor,
+         signupLoginErrMsg
 };

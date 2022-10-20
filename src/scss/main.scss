@@ -1,10 +1,11 @@
 @import 'utils/utils', 'utils/config', 'utils/button', 'login-signup', 'hdr';
 
-$background-color: #663399;
+$primary-color: #663399;
+$secondary-color: #B48311;
 $selection-width: 85vw;
 $selection-height: 60vh;
 body {
-   background-color: $background-color;
+   background-color: $primary-color;
 }
 #dashboard-container {
 	width: 85%;
@@ -20,6 +21,15 @@ body {
 	    font-size: 1.25rem;
 	}
 }
+#signup-login-error-message {
+    position: relative;
+	top: 140px;
+	left: 55px;
+
+	color: $secondary-color;
+	font-size: 1.35rem;
+	font-style: italic;
+}
 #signup-login {
    width: $selection-width;
    height: $selection-height;
@@ -30,10 +40,10 @@ body {
 	   @include hdr;
    }
    #signup-form {
-	   @include l-s(100%, $background-color, white, #B48311);
+	   @include l-s(100%, $primary-color, white, $secondary-color);
    }
    #login-form {
-	   @include l-s(100%, $background-color, white, #B48311);
+	   @include l-s(100%, $primary-color, white, $secondary-color);
    }
    .hidden {
 	   display: none;
