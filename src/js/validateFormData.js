@@ -19,17 +19,17 @@ const validateLogin = function(loginData, dbData, doValid) {
 
 const validateSignup = function(signupData, dbData, doValid) {
     dbData.then(res => {
-	    const user = res[0];
-	    const name = user.name;
-	    const username = user.username;
-	    const password = user.password;
-	    const confirm_password = user.confirm_password;
-	    const email = user.email;
-
-		let errorMsg = "";
 	    if(signupData.password == signupData.confirm_password) { 
+			const users = res;
+			const user = users.find(thisUser => thisUser.username == signupData.username);
+		    if(user) {
+			   signupLoginErrMsg.textContent = "Username is not available";
+			} else {
+			   doValid();
+			   if(signupLoginErrMsg) signupLoginErrMsg.textContent = "";
+			}
 		} else {
-		   console.log("test!");
+		    signupLoginErrMsg.textContent = "Passwords do not match.";
 		}
 	}).catch(err => console.log(err));
 };

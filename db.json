@@ -1,12 +1,3 @@
 {
-  "users": [
-    {
-      "name": "Michael James",
-      "username": "micrjames",
-      "password": "hM5BmWy1",
-      "confirm_password": "hM5BmWy1",
-      "email": "micrjames@gmail.com",
-      "id": 1
-    }
-  ]
+  "users": []
 }
