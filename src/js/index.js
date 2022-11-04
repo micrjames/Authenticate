@@ -53,13 +53,7 @@ if(signupForm) {
 	    validateSignup(user, users, function() {
 		   addUser(user);
 		   localStorage.setItem("auth", 1);
-		   loginForm.reset();
-
-		   const name = user.name;
-		   const fullName = name.split(" ");
-		   const firstName = fullName[0];
-		   
-		   location.replace(`dashboard.html?name=${firstName}`);
+		   signupForm.reset();
 		});
 	});
 }
