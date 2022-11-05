@@ -7,17 +7,23 @@ import { Signup } from "./Signup.js";
 import { fetchUsers, addUser } from "./crudUsers.js";
 import { validateLogin, validateSignup } from "./validateFormData.js";
 
+const users = fetchUsers();
+users.then(res => console.log(res));
+
 const loginState = [loginToggleBtn, loginForm];
 const signupState = [signupToggleBtn, signupForm];
 
 toggleFormState(loginState, signupState);
+window.history.pushState("login", "", "/login");
 
 loginToggleBtn.addEventListener("click", function() {
     toggleFormState(loginState, signupState);
+    window.history.pushState("login", "", "/login");
 });
 
 signupToggleBtn.addEventListener("click", function() {
     toggleFormState(signupState, loginState);
+    window.history.pushState("signup", "", "/signup");
 });
 
 if(loginForm) {
@@ -38,7 +44,7 @@ if(loginForm) {
 			    const fullName = name.split(" ");
 			    const firstName = fullName[0];
 
-			    location.replace(`dashboard.html?name=${firstName}`);
+			    location.assign(`dashboard.html?name=${firstName}`);
 			}).catch(err => console.log(err));
 	   });
 	});
@@ -54,6 +60,12 @@ if(signupForm) {
 		   addUser(user);
 		   localStorage.setItem("auth", 1);
 		   signupForm.reset();
+
+		   const name = user.name;
+		   const fullName = name.split(" ");
+		   const firstName = fullName[0];
+
+		   location.assign(`dashboard.html?name=${firstName}`);
 		});
 	});
 }
