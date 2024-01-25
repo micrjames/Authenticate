@@ -1,25 +1,36 @@
 {
-  "name": "Authenticate",
+  "name": "authenticate",
   "version": "0.1.0",
   "description": "An implemented of a signup and login page..",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "json-server --watch db.json --port 5000"
+    "test": "jest",
+    "start": "nodemon ./dist localhost 3000",
+    "build": "npx tsc"
   },
   "author": "me",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.27.7",
-    "del": "^6.0.0",
-    "gulp": "^4.0.2",
-    "gulp-postcss": "^9.0.1",
-    "gulp-sass": "^5.0.0",
-    "gulp-sourcemaps": "^3.0.0",
-    "sass": "^1.43.4"
+    "@testing-library/jest-dom": "^6.2.0",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/jest": "^29.5.11",
+    "@types/jsdom": "^21.1.6",
+    "@types/node": "^20.11.6",
+    "jest": "^29.7.0",
+    "nodemon": "^3.0.3",
+    "sass": "^1.43.4",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.3.3"
   },
   "keywords": [
     "search",
     "app"
-  ]
+  ],
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.1",
+    "express": "^4.18.2",
+    "jsdom": "^23.2.0"
+  }
 }
