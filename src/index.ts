@@ -12,6 +12,16 @@ const app: Application = express();
 app.use(cors({ origin: `http://localhost:${PORT}`  }));
 app.use(express.static('./dist/client'));
 app.use(express.urlencoded({ extended: false }));	// parse form data
+/*
+ *app.get('/', (req: Request, res: Response) => {
+});
+app.get('/signout', (req: Request, res: Response) => {
+   res.redirect('/');
+});
+app.post('/login', (req: Request, res: Response) => {
+});
+ */
+
 app.listen(PORT, () => {
 	console.log(`Server is listening on port ${PORT}...`);
 });
